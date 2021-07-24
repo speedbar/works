@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+  int n,e,i,j,p=0;
+  int A[100],B[100];
+  scanf("%d",&n);
+  scanf("%d",&e);
+  
+  for(i=0;i<n;i++)
+  {
+      scanf("%d",&A[i]);
+  }
+  for(i=0;i<n;i++)
+  {
+      scanf("%d",&B[i]);
+  }
+  for(j=0;j<n;j++)
+  {
+    for(i=0;i<n;i++)
+  {
+      if(A[i]<=e)
+  {
+      A[i]=100000;
+    e=e+B[i];
+    p++;
+  }
+  }
+  }
+  p=p;
+  printf("%d",p);
+  return 0;
+}
